@@ -4,7 +4,7 @@ from django.test import TestCase
 from django.test import RequestFactory
 from .views import TestView
 from tls_middleware.utils import get_request
-from tls_middleware import TLSMiddleware
+from tls_middleware.tls import TLSMiddleware
 
 
 class TestTLSMiddleware(TestCase):
