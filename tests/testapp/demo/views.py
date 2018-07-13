@@ -7,6 +7,5 @@ from django.views import View
 
 class TestView(View):
     def get(self, *args):
-
         return HttpResponse('Response')
 

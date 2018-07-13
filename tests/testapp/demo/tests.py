@@ -9,15 +9,18 @@ from tls_middleware.tls import TLSMiddleware
 
 class TestTLSMiddleware(TestCase):
     def setUp(self):
-        self.factory = RequestFactory()
+        def factory(url):
+            return RequestFactory().get(url)
+
         self.tls_middleware = TLSMiddleware()
         self.test_view = TestView()
-        self.request = self.factory.get('/')
+        self.request = factory('/')
 
     def test_tls_middleware_process_request(self):
         self.tls_middleware.process_request(self.request)
 
         self.assertIsInstance(get_request(), WSGIRequest)
+        self.assertEqual(get_request(), self.request)
 
     def test_tls_middleware_process_response(self):
         response = self.test_view.get(self.request)
