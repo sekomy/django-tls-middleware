@@ -8,6 +8,20 @@ except ImportError as ie:
 _tls = local()
 
 
+def get_user():
+    """
+    :return: User
+   """
+    return getattr(_tls, 'user', None)
+
+
+def get_request():
+    """
+    :return: <WSGIRequest:>
+    """
+    return getattr(_tls, 'request', None)
+
+
 class TLSMiddleware(MiddlewareMixin):
     def process_request(self, request):
         # set request and user to tls
