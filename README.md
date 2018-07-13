@@ -12,13 +12,13 @@ Stores the current request in [Thread Local Storage](https://en.wikipedia.org/wi
     # settings.py
     MIDDLEWARE = [
         ...
-        'tls_middleware.tls.TLSMiddleware',
+        'tls_middleware.TLSMiddleware',
    ]
 ```
 
 ### Usage
 ```bash
-from tls_middleware.utils import get_request
+from tls_middleware import get_request
 request = get_request()
 # do something useful with current request object
 ```
