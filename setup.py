@@ -5,7 +5,7 @@ with open('README.md') as fp:
 
 setup(
     name='django-tls-middleware',
-    version='0.1.0',
+    version='0.1.1',
     url='https://github.com/sekomy/django-tls-middleware',
     author='Sekom Yazilim',
     author_email='info@sekomyazilim.com.tr',
