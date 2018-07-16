@@ -8,7 +8,7 @@ Stores the current request in [Thread Local Storage](https://en.wikipedia.org/wi
 ```
 
 ### Configuration
-```bash
+```python
     # settings.py
     MIDDLEWARE = [
         ...
@@ -17,7 +17,7 @@ Stores the current request in [Thread Local Storage](https://en.wikipedia.org/wi
 ```
 
 ### Usage
-```bash
+```python
 from tls_middleware import get_request
 request = get_request()
 # do something useful with current request object

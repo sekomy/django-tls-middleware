@@ -11,6 +11,7 @@ setup(
     author_email='info@sekomyazilim.com.tr',
     license='MIT',
     description='TLS Middleware',
+    py_modules=["tls_middleware"],
     long_description=long_description,
     packages=find_packages(exclude=['docs', 'tests*']),
     platforms=['any'],

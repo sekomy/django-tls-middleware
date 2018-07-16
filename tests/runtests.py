@@ -13,7 +13,6 @@ if __name__ == "__main__":
     sys.path.append(path)
 
     django.setup()
-    TestRunner = get_runner(settings)
-    test_runner = TestRunner()
+    test_runner = get_runner(settings)()
     failures = test_runner.run_tests(["test_tls_middleware"])
     sys.exit(bool(failures))
